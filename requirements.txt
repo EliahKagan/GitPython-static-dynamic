@@ -1,5 +1,8 @@
 mypy
+pyright
 pytest
+pytest-sugar
+ruff
 
 # Install GitPython from the GitPython directory alongside this directory.
 ../GitPython
