@@ -1,0 +1,5 @@
+mypy
+pytest
+
+# Install GitPython from the GitPython directory alongside this directory.
+../GitPython
