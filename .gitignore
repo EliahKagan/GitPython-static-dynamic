@@ -1,5 +1,9 @@
-# Cached Python bytecode
-__pycache__/
-
-# Python virtual environment
+# Virtual environments
+.tox/
 .venv/
+
+# Caches
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
