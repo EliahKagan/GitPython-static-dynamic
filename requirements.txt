@@ -3,7 +3,7 @@ pyright
 pytest
 pytest-sugar
 ruff
-typing-extensions
+typing-extensions;python_version<"3.11"
 
 # Install GitPython from the GitPython directory that resides alongside this directory.
 ../GitPython
