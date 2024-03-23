@@ -3,6 +3,7 @@ pyright
 pytest
 pytest-sugar
 ruff
+typing-extensions
 
-# Install GitPython from the GitPython directory alongside this directory.
+# Install GitPython from the GitPython directory that resides alongside this directory.
 ../GitPython
