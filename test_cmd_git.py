@@ -68,7 +68,7 @@ else:
 import pytest
 from pytest import WarningsRecorder
 
-from git.cmd import Git
+from git.cmd import Git, GitMeta
 
 _USE_SHELL_DEPRECATED_FRAGMENT = "Git.USE_SHELL is deprecated"
 """Text contained in all USE_SHELL deprecation warnings, and starting most of them."""
@@ -388,3 +388,15 @@ def test_instance_dir() -> None:
     instance = Git()
     actual = set(dir(instance))
     assert _EXPECTED_DIR_SUBSET <= actual
+
+
+def test_metaclass_alias() -> None:
+    """GitMeta aliases Git's metaclass, whether that is type or a custom metaclass."""
+
+    def accept_metaclass_instance(cls: GitMeta) -> None:
+        """Check that cls is statically recognizable as an instance of GitMeta."""
+
+    accept_metaclass_instance(Git)  # assert_type would expect Type[Git], not GitMeta.
+
+    # This comes after the static check, just in case it would affect the inference.
+    assert type(Git) is GitMeta
