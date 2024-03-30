@@ -33,8 +33,9 @@ equivalent”](https://en.wikipedia.org/wiki/Public-domain-equivalent_license)
 license that imposes no restrictions. This is the same license [used for code
 examples in Python's
 documentation](https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python).
+See [**`LICENSE`**](LICENSE).
 
-Note that 0BSD is not the license of
+Note that 0BSD is *not* the license of
 [GitPython](https://github.com/gitpython-developers/GitPython) itself, only of
 the contents of this repository, which contain no code first appearing in
 GitPython. Code under 0BSD can be used in any way and included in software
