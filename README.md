@@ -7,9 +7,11 @@ This is for testing how static type checking works in code that uses
 [GitPython](https://github.com/gitpython-developers/GitPython) but is not part
 of GitPython and does not use its specific `mypy` configuration. Its purpose is
 to check that static type checking still works, and is able to find all the
-same kinds of errors it was able to find before, even across **a specific
-proposed change to GitPython** that adds some new dynamic behavior to warn on
-access to some deprecated module attributes and a deprecated class attribute.
+same kinds of errors it was able to find before, even across [a specific
+proposed change to
+GitPython](https://github.com/gitpython-developers/GitPython/pull/1886) that
+adds some new dynamic behavior to warn on access to some deprecated module
+attributes and a deprecated class attribute.
 
 Because static analysis of code that uses a library does not always behave
 quite the same inside a project as outside, **I developed these tests here
