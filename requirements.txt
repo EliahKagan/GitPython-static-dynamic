@@ -5,5 +5,5 @@ pytest-sugar
 ruff
 typing-extensions;python_version<"3.11"
 
-# Install GitPython from the GitPython directory that resides alongside this directory.
-../GitPython
+# Install GitPython from a commit in my fork containing changes to be tested.
+git+https://github.com/EliahKagan/GitPython.git@60987f9d913cf78260ae66b3451c21521aa8890c
