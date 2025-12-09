@@ -59,3 +59,23 @@ jobs:
 
     - name: Check with tox
       run: tox
+
+  all-pass:
+    name: All tox checks pass
+
+    needs: [tox]
+
+    # Don't skip `all-pass` on cancellation, since a skipped required check won't block auto-merge.
+    if: always()
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Some failed
+      if: contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'failure')
+      run: |
+        false
+
+    - name: All passed
+      run: |
+        true
