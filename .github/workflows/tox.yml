@@ -9,10 +9,10 @@ jobs:
         os:
         - ubuntu-22.04  # Used only for testing Python 3.7.
         - ubuntu-latest
-        - macos-13
+        - macos-15-intel
         - macos-latest
         - windows-latest
-        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11', '3.12']
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14']
         exclude:
         # Exclude unnecessary Ubuntu 22.04 runs.
         - os: ubuntu-22.04
@@ -25,6 +25,10 @@ jobs:
           python-version: '3.11'
         - os: ubuntu-22.04
           python-version: '3.12'
+        - os: ubuntu-22.04
+          python-version: '3.13'
+        - os: ubuntu-22.04
+          python-version: '3.14'
         # Exclude builds that are not currently available.
         - os: ubuntu-latest
           python-version: '3.7'
